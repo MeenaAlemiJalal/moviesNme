@@ -1,0 +1,54 @@
+.registration-w {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.register-form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid white;
+  padding: 40px 30px;
+  border-radius: 10px;
+
+}
+
+.register-form  input {
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.have-account {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.have-account a {
+  cursor: pointer;
+  color: darkblue;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.fullname {
+
+}
+
+.username {
+
+}
+
+.password {
+  margin-bottom: 30px !important;
+}
+
+.register-btn {
+  
+}
+

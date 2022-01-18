@@ -2,26 +2,27 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/register.css">
   <title>MoviesNme</title>
 </head>
 
 <body>
   <div class="main-container">
     <header class="header">
-      <div class="logo">MoviesNme</div>
+      <a href="/" class="logo">MoviesNme</a>
       <nav class="navigation">
-        <li>TV</li>
-        <li>NEW SERIES</li>
-        <li>MOVIES</li>
-        <li>CLASSIC</li>
+        <li><a href="#new-series">NEW SERIES</a></li>
+        <li><a href="#new-movies">MOVIES</a></li>
+        <li><a href="#classic-movies">CLASSIC</a></li>
       </nav>
-      <button class="register-btn">Register</button>
+        <button type="submit" class="register-btn"><a href="/login">Login</a></button>
     </header>
+    <main class="body-container">
       {{{ body }}}
+    </main>
     <footer>
       Copy right, all rights reserved
     </footer>
-
   </div>
 </body>
 

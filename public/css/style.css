@@ -2,16 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:Verdana, Geneva, Tahoma, sans-serif
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: black;
 }
 li {
   list-style: none;
 }
 .main-container {
   padding: 0 150px;
+  display: flex;
+  flex-direction:column;
+  min-height: 100vh;
+  background-color: lightblue;
 }
 .body-container{
-  border: 1px solid red;
+  flex: 1;
 }
 .header {
   display: flex;
@@ -19,8 +28,7 @@ li {
   align-items: center;
   margin-top: 10px;
   padding: 15px 80px;
-  border: 1px solid red;
-
+  background-color: white
 }
 .logo{
   font-size: 35px;
@@ -65,6 +73,7 @@ li {
 }
 
 .general-section--new-series {
+  background-color: white
 
 }
 
