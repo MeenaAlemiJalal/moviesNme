@@ -2,34 +2,31 @@
     {{data.text}}
   </div>
   <section class="general-section general-section--new-series" id="new-series">
-    <h1 class="section-title section-title--black">Top new series</h1>
-    <p class="section-desc section-desc--black">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+    <h1 class="section-title section-title--black">Top New Series</h1>
+    <p class="section-desc section-desc--black">Select a top series from the list of new released recently. All series here are moviesNme original with 4k quality image. These are chosen for you based on your interest.</p>
     <div class="movies-list">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
+      {{#each series}}
+      <a href="/movies/{{this.id}}"> <img src="{{this.poster}}" alt=""> </a>
+      {{/each}}
     </div>
   </section>
 
   <section class="general-section general-section--new-movies" id="new-movies">
     <h1 class="section-title section-title--darkblue">new movies</h1>
-    <p class="section-desc section-desc--darkblue">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+    <p class="section-desc section-desc--darkblue">Select a top movies from the list of new released recently. All movies here are moviesNme original with 4k quality image. These are chosen for you based on your interest.</p>
     <div class="movies-list">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
+        {{#each movies}}
+       <a href="/movies/{{this.id}}"> <img src="{{this.poster}}" alt=""> </a>
+        {{/each}}
     </div>
   </section>
 
   <section class="general-section general-section--classic-movies" id="classic-movies">
       <h1 class="section-title section-title--white">classic movies</h1>
-      <p class="section-desc section-desc--white">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+      <p class="section-desc section-desc--white">Select a top classic from the our collection here. All classics here are moviesNme original with 4k quality image. These are chosen for you based on your interest.</p>
       <div class="movies-list">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+        {{#each classic}}
+       <a href="/movies/{{this.id}}"> <img src="{{this.poster}}" alt=""> </a>
+        {{/each}}
       </div>
   </section>
