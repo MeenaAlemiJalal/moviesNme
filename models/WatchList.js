@@ -11,20 +11,19 @@ WatchList.init(
       primaryKey: true,
       autoIncrement: true
     },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    movie_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'movie',
+        key: 'id'
+      }
     },
-    text: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    owner: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
-        key: 'id',
-      },
+        key: 'id'
+      }
     }
   },
   {
