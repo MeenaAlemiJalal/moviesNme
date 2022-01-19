@@ -1,0 +1,22 @@
+<section class="movie-w">
+  <div class="movie-poster-details">
+    <div class="movie-poster">
+      <img src="{{movie.Poster}}" alt="">
+    </div>
+    <div class="movie-details">
+      <h1>{{movie.Title}}</h1>
+      <p>Released: {{movie.Released}}</p>
+      <p>Type: {{movie.Type}}</p>
+      <p>Duration: {{movie.Runtime}}</p>
+      <p>Genre: {{movie.Genre}}</p>
+      <p>Director: {{movie.Director}}</p>
+      <p>Actors: {{movie.Actors}}</p>
+      <p>Language: {{movie.Language}}</p>
+      <p>Country: {{movie.Country}}</p>
+      <p>Imdb Rating: {{movie.imdbRating}}</p>
+      <form action="/movies/{{movie.id}}">
+        <button>+ Add to watchlist</button>
+      </form>
+    </div>
+  </div>
+</section>

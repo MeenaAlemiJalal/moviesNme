@@ -1,0 +1,32 @@
+  <div class="featured-movie">
+    {{data.text}}
+  </div>
+  <section class="general-section general-section--new-series" id="new-series">
+    <h1 class="section-title section-title--black">Top New Series</h1>
+    <p class="section-desc section-desc--black">Select a top series from the list of new released recently. All series here are moviesNme original with 4k quality image. These are chosen for you based on your interest.</p>
+    <div class="movies-list">
+      {{#each series}}
+      <a href="/movies/{{this.id}}"> <img src="{{this.poster}}" alt=""> </a>
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="general-section general-section--new-movies" id="new-movies">
+    <h1 class="section-title section-title--darkblue">new movies</h1>
+    <p class="section-desc section-desc--darkblue">Select a top movies from the list of new released recently. All movies here are moviesNme original with 4k quality image. These are chosen for you based on your interest.</p>
+    <div class="movies-list">
+        {{#each movies}}
+       <a href="/movies/{{this.id}}"> <img src="{{this.poster}}" alt=""> </a>
+        {{/each}}
+    </div>
+  </section>
+
+  <section class="general-section general-section--classic-movies" id="classic-movies">
+      <h1 class="section-title section-title--white">classic movies</h1>
+      <p class="section-desc section-desc--white">Select a top classic from the our collection here. All classics here are moviesNme original with 4k quality image. These are chosen for you based on your interest.</p>
+      <div class="movies-list">
+        {{#each classic}}
+       <a href="/movies/{{this.id}}"> <img src="{{this.poster}}" alt=""> </a>
+        {{/each}}
+      </div>
+  </section>
