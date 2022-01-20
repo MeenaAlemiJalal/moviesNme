@@ -1,11 +1,11 @@
 # moviesNme
-moviesNme is a movies streaming app using OMDB ( http://www.omdbapi.com/) to fetch a large library of movies and make it available to movie lovers.
+MoviesNme is a movies streaming app using OMDB ( http://www.omdbapi.com/) to fetch a large library of movies and make it available to movie lovers.
 ## Project description
 Users can sign up using their name, username and password to log on to the moviesNme app and pick their favorite movie to watch.
 They also have access to a description of the movies and reviews.
 They can save their favorite movies to a list.
 ## Tech details
-moviesNme uses the MVC model. it uses express.js to create a server, sequelize, sql2, and user authentication.
+moviesNme uses the MVC model. it uses express.js to create a server, sequelize, mysql2, and user authentication.
 ## App URL
 https://movienme.herokuapp.com/
 ## Screen shots
