@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  height: 100%;
 }
 
 .register-form {
@@ -12,6 +13,7 @@
   border: 1px solid white;
   padding: 40px 30px;
   border-radius: 10px;
+  height: 300px;
 
 }
 
