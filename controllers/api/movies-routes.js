@@ -68,7 +68,7 @@ router.get('/watchlist/:user_id', authenticate, async (req, res) => {
       include: [{model: Movie}],
       raw: true
     })
-    res.status(200).render('watchlist', {user: req.session.user, watchlist: watchlist})
+    res.status(200).render('watchlist', {user: req.session.user, watchlist: watchlist, userName: req.session.userName})
   }catch(error){
     res.status(500).json(error.message)
   }

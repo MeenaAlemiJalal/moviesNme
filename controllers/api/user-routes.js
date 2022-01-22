@@ -26,6 +26,7 @@ router.post('/register', (req, res, next) => {
           .then(user => {
               req.session.user = 'authenticated';
               req.session.userId = user.id
+              req.session.userName = req.body.username
               res.statusCode = 200;
               res.setHeader('Content-Type', 'application/json');
               res.redirect('/');
@@ -57,7 +58,8 @@ router.post('/login', (req, res, next) => {
           } 
           if (user.username === username) {
               req.session.user = 'authenticated';
-              req.session.userId = user.id
+              req.session.userId = user.id;
+              req.session.userName = username
               res.statusCode = 200;
               res.setHeader('Content-Type', 'text/plain');
               res.redirect('/posts')
