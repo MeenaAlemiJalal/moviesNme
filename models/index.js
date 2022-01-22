@@ -1,30 +1,27 @@
 const User = require('./User');
 const Movie = require('./Movie');
-// const PostComment = require('./PostComment')
+const WatchList = require('./WatchList');
 
 
-// A user can have many posts
-// User.hasMany(Post, {
-//   foreignKey: 'owner',
-//   onDelete: 'CASCADE'
-// });
 
-// // A post belongs to a single user
-// Post.belongsTo(User, {
-//   foreignKey: 'owner'
-// });
+WatchList.belongsTo(Movie, {
+  foreignKey: 'movie_id'
+})
 
-// // A post can have many comments
-// Post.hasMany(PostComment,{
-//   foreignKey:'related_post',
-//   as: 'comments',
-//   onDelete: 'CASCADE'
-// })
+Movie.hasMany(WatchList, {
+  foreignKey: 'movie_id',
+  as: 'watchlist',
+  onDelete: 'CASCADE'
+})
 
-// // A comment belongs to a signle post
-// PostComment.belongsTo(Post, {
-//   foreignKey: 'related_post',
-//   as: 'post'
-// })
+User.hasMany(WatchList,{
+  foreignKey:'user_id',
+  as: 'watchlist',
+  onDelete: 'CASCADE'
+})
 
-module.exports = { User, Movie };
+WatchList.belongsTo(User, {
+  foreignKey: 'user_id',
+})
+
+module.exports = { User, Movie, WatchList };

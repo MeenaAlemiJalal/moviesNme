@@ -1,0 +1,18 @@
+<section class="movie-w">
+  {{#each watchlist}}
+    <div class="watchlist-poster-details">
+      <div class="movie-poster">
+        <img src="{{this.[movie.poster]}}" alt="">
+      </div>
+      <div class="movie-details">
+        <h1>{{this.[movie.title]}}</h1>
+        <p>Released: {{this.[movie.year]}}</p>
+        <form action="/watchlist/delete/{{this.id}}" method="post">
+          <button>Remove</button>
+        </form>
+      </div>
+    </div>
+    {{else}}
+    <div>Nothing in the watchlist yet.</div>
+  {{/each}}
+</section>

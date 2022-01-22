@@ -1,8 +1,8 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
-// const session = require('express-session');
-// const FileStore = require('session-file-store')(session);
+const session = require('express-session');
+const FileStore = require('session-file-store')(session);
 const routes = require('./controllers');
 const  sequelize = require('./config/connection');
 
@@ -18,18 +18,19 @@ app.use(express.urlencoded({ extended: true }));
 // Set Handlebars as the default template engine.
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+app.enable('view cache');
 
 
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use(session({
-//   name: 'session-id',
-//   secret:  process.env.SESSION_SECRET, 
-//   saveUninitialized: false,
-//   resave: false,
-//   store: new FileStore()
-// }));
+app.use(session({
+  name: 'session-id',
+  secret:  process.env.SESSION_SECRET, 
+  saveUninitialized: false,
+  resave: false,
+  store: new FileStore()
+}));
 
 // turn on routes
 app.use(routes);

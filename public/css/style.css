@@ -187,6 +187,17 @@ footer {
 
 }
 
+.watchlist-poster-details {
+  display: flex;
+  margin-top: 20px;
+
+}
+
+.watchlist-poster-details .movie-poster img{
+  width: 150px;
+  height: 200px;
+}
+
 
 
 

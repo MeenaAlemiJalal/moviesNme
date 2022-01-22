@@ -14,6 +14,7 @@ router.get('/register', async (req, res)=>{
 
 
 router.post('/register', (req, res, next) => {
+  console.log('retistered route hit', req.body)
   User.findOne({where:{username: req.body.username}})
   .then(user => {
       if (user) {
@@ -29,10 +30,10 @@ router.post('/register', (req, res, next) => {
               res.setHeader('Content-Type', 'application/json');
               res.redirect('/');
           })
-          .catch(err => next(err));
+          .catch(err => next(err.message));
       }
   })
-  .catch(err => next(err));
+  .catch(err => next(err.message));
 });
 
 router.post('/login', (req, res, next) => {
