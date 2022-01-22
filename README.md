@@ -21,5 +21,6 @@ https://movienme.herokuapp.com/
 
 <img width="883" alt="4" src="https://user-images.githubusercontent.com/91281668/150245110-000ee8ea-f22b-46c3-ac8e-31bddec3fb2c.png">
   
+<img width="652" alt="123" src="https://user-images.githubusercontent.com/91281668/150623068-4cdf92c5-cca8-4f40-84a4-5c0dbf75a9c5.png">
 
 
