@@ -1,8 +1,7 @@
 <section class="registration-w">
-    <form action="/register" class="register-form">
-      <input type="text" class="fullname" name="fullname" placeholder="Enter your full name">
-      <input type="text" class="username" name="username" placeholder="Enter your username">
-      <input type="password" class="password" name="password" placeholder="Enter your password">
+    <form action="/users/register" class="register-form" method="post">
+      <input type="text" class="username" name="username" placeholder="Enter your username" required>
+      <input type="password" class="password" name="password" placeholder="Enter your password" required>
       <button class="register-btn" type="submit">Register</button>
       <p class="have-account">Already have an account? <a href="/login">Login</a></p>
   </form>

@@ -15,7 +15,8 @@
         <li><a href="#new-movies">MOVIES</a></li>
         <li><a href="#classic-movies">CLASSIC</a></li>
       </nav>
-        <button type="submit" class="register-btn"><a href="/login">Login</a></button>
+        <a href={{#if user}} "/watchlist/{{user}}" {{^}} "/users/login"{{/if}}><button type="submit" class="register-btn">Watchlist</button></a>
+        <a href={{#if user}} "/users/logout" {{^}} "/users/login"{{/if}}><button type="submit" class="register-btn">{{#if user}} Logout {{^}} Login {{/if}}</button></a>
     </header>
     <main class="body-container">
       {{{ body }}}

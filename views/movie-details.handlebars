@@ -14,7 +14,9 @@
       <p>Language: {{movie.Language}}</p>
       <p>Country: {{movie.Country}}</p>
       <p>Imdb Rating: {{movie.imdbRating}}</p>
-      <form action="/movies/{{movie.id}}">
+      <form action={{#if user}} "/watchlist" {{^}} "/users/login"{{/if}} method={{#if user}} "post" {{^}} "get" {{/if}}>
+        <input name='user_id' value="{{user}}" type="hidden">
+        <input name='movie_id' value="{{movie.id}}" type="hidden">
         <button>+ Add to watchlist</button>
       </form>
     </div>
